@@ -121,7 +121,7 @@ resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
 }
 
 resource "aws_alb" "application_load_balancer" {
-  name               = "test-lb-tf" # Naming our load balancer
+  name               = "challengeapp_lb"
   load_balancer_type = "application"
   subnets = [ # Referencing the default subnets
     "${aws_default_subnet.default_subnet_a.id}",
