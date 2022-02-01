@@ -2,6 +2,17 @@
 
 This is Jason Lee's submission for the Service tech challenge app assessment.
 
+## Repository structure
+
+``` sh
+.
+├── main.tf        # Contains configuration for the bulk of the infrastructure including the applications to be deployed
+├── db.tf          # Contains specific configurations for the databases
+├── variables.tf   # Contains user defined variables
+├── outputs.tf     # Contains outputs which are needed for some deployment steps
+└── README.md      # This document
+```
+
 ## Prerequisites
 
 Before attempting to deploy this app, ensure that you have a machine with the following prerequites met:
@@ -33,7 +44,7 @@ To deploy the application follow the following steps
 `terraform apply`
 5. This will prompt for the DB user and password to be used to provision resources. Set your own credentials here and keep them in a safe place.
 6. Once the deployment is done, you will get some outputs that look similar to below note these down for the following steps:
-```
+``` sh
 dnsname = "test-lb-tf-761000961.ap-southeast-2.elb.amazonaws.com"
 securitygroupid = "sg-06f7898adbbc6b64c"
 subnetid = "subnet-21383068"
