@@ -79,7 +79,7 @@ resource "aws_ecs_task_definition" "challengeapp_updatedb_task" {
     {
       name         = "challengeapp_updatedb_task"
       image        = "servian/techchallengeapp:latest"
-      command      = ["updatedb"]
+      command      = ["updatedb", "-s"]
       environment  = [
           {"name": "VTT_DBHOST", "value": "${aws_db_instance.challengeappdb.address}"},
           {"name": "VTT_DBPORT", "value": "${tostring(var.dbport)}"},
