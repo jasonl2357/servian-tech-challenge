@@ -54,7 +54,8 @@ resource "aws_ecs_task_definition" "challengeapp_service_task" {
           {"name": "VTT_DBHOST", "value": "${aws_db_instance.challengeappdb.address}"},
           {"name": "VTT_DBPORT", "value": "${tostring(var.dbport)}"},
           {"name": "VTT_DBUSER", "value": "${var.db_username}"},
-          {"name": "VTT_DBPASSWORD", "value": "${var.db_password}"}
+          {"name": "VTT_DBPASSWORD", "value": "${var.db_password}"},
+          {"name": "VTT_LISTENHOST", "value": "0.0.0.0"}
       ]
       cpu          = 256
       memory       = 512

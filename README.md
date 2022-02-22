@@ -25,11 +25,10 @@ Before attempting to deploy this app, ensure that you have a machine with the fo
 
 ## Limitations and future improvements
 
-Due to the limited time available before submitting this assessment, not all best practices were followed in the interest of time. Not all applications could be made to work properly either. These are detailed below.
+Due to the limited time available before submitting this assessment, not all best practices were followed in the interest of time. These are detailed below.
 
 - All the resources including database are created in the default VPC. These should be segregated further in the future in the interest of security.
 - Autoscaling for the service containers should be added in the future to allow dynamic scaling of resources.
-- While updatedb command could be used to populate the database, I was not able to get correct responses when the app was run with the "serve" command. I ran into the same issue when I ran the App locally for testing and I have not had the time to debug this issue yet. Therefore while this will deploy all of the services, you may not get responses from the application.
 
 ## Deployment instructions
 
